@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var num, acc = 0,op = "";
+
+		function mas() {acc = num.value; op = "+"}
+		function menos() {acc = num.value; op = "-"}
+		function multiplicacion() {acc = num.value; op = "*"}
+		function division() {acc = num.value; op = "/"}
+		function inverso() {acc = num.value; op = "1/"}
+		function potencia() {acc = num.value; op = "^"}
+
+		function calcular(){
+			if (op === "+") {num.value = (+acc + +num.value)}
+			if (op === "-") {num.value = (+acc - +num.value)}
+			if (op === "*") {num.value = (+acc * +num.value)}
+			if (op === "/") {num.value = (+acc / +num.value)}
+			if (op === "1/") {num.value = (1/acc)}
+			if (op === "^") {num.value = (Math.pow(+acc, +num.value))}
+		} 
+	function inic () { num = document.getElementById("num");}
+	function vaciar () {num.value = "";}
+	</script>
+</head>
+<body onload="inic()">
+	  Número:<p>
+  <input type="text" size="16" id="num" onClick="vaciar()"><p>
+  <button onClick="mas()">+</button>
+  <button onClick="menos()">-</button>
+  <button onClick="menos()">*</button>
+  <button onClick="menos()">/</button>
+  <button onClick="menos()">1/</button>
+  <button onClick="menos()">^</button>
+  <button onClick="calcular()">=</button>
+  </p>
+</body>
+</html>
