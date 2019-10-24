@@ -17,7 +17,7 @@
 			$sel -> close();
 			$con -> close();
 
-
+?>
 			</select>
 		</table>
 
